@@ -10,7 +10,7 @@ namespace ConsoleApp3
     {
       static void Main(string[] args)
         {
-        int n= Convert.ToInt32(Console.ReadLine());//
+        int n= Convert.ToInt32(Console.ReadLine());//Вводим размер массива в 32 битной систем счисления
         string s = Console.ReadLine();//Вводим стринговый массив
         string[] sarray = s.Split(' ');//Разделяем значения строки
         int[] array =new int[n];//Создаем первый массив
