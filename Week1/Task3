@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+  class Program
+    {
+      static void Main(string[] args)
+        {
+        int n= Convert.ToInt32(Console.ReadLine());//
+        string s = Console.ReadLine();//Вводим стринговый массив
+        string[] sarray = s.Split(' ');//Разделяем значения строки
+        int[] array =new int[n];//Создаем первый массив
+        int[] arr = new int[n*2];//Создаем второй массив который 2 раза больше чем 1 массив
+        for(int i=0;i<sarray.Length;i++)//Присваеваем значения стрингового массива в значения первого массива
+          {
+            array[i]=int.Parse(sarray[i]);
+          }
+        for(int i=0;i<array.Length;i++)//Присваеваем значения первого массива в значения 2 массива
+          {
+            arr[i*2]=array[i];
+            arr[(i*2)+1]=array[i];
+          }
+        for(int i=0;i<arr.Length;i++)//Выводим значения 2го массива
+            {
+              Console.Write(arr[i] + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
